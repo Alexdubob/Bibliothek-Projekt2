@@ -1,0 +1,9 @@
+<div class="container">
+    <app-header></app-header>
+    <div class="card-container">
+        <app-card *ngFor="let i of [0,1,2,3]" 
+        [img]="cardImages[i]" 
+        [text]="cardTexts[i]"></app-card>
+    </div>
+</div>
+
