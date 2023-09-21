@@ -11,6 +11,9 @@ import { TopRankedComponent } from './top-ranked/top-ranked.component';
 import { AllTimePopularComponent } from './all-time-popular/all-time-popular.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ListComponent } from './list/list.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { LoginComponent } from './login/login.component';
     TopRankedComponent,
     AllTimePopularComponent,
     SearchbarComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent,
+    ListComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

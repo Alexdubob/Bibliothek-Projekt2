@@ -1,47 +1,7 @@
 <section class="header">
     <app-header></app-header>
 </section>
+
 <div class="container">
-
-    <section class="currently-trending">
-        <h2>Currently Trending</h2>
-        <div class="card-container">
-            <app-card *ngFor="let image of cardImages; let i = index" [img]="cardImages[i]" [text]="cardTexts[i]">
-            </app-card>
-            <app-card *ngFor="let image of cardImages; let i = index" [img]="cardImages[i]" [text]="cardTexts[i]">
-            </app-card>
-            
-        </div>
-    </section>
-
-    <section class="current-season">
-        <h2>Current Season</h2>
-        <div class="card-container">
-            <app-card *ngFor="let image of cardImages; let i = index" [img]="cardImages[i]" [text]="cardTexts[i]">
-            </app-card>
-            
-        </div>
-    </section>
-
-    <section class="top-ranked">
-        <h2>Top Ranked</h2>
-        <div class="card-container">
-            <app-card *ngFor="let image of cardImages; let i = index" [img]="cardImages[i]" [text]="cardTexts[i]">
-            </app-card>
-            
-        </div>
-    </section>
-
-    <section class="all-time-popular">
-        <h2>All Time Popular</h2>
-        <div class="card-container">
-            <app-card *ngFor="let image of cardImages; let i = index" [img]="cardImages[i]" [text]="cardTexts[i]">
-            </app-card>
-            
-        </div>
-    </section>
-
-
-
-
+    <router-outlet></router-outlet>
 </div>
