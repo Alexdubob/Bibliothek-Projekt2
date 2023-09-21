@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar{
+    margin-top: 3rem;
+}
+
+input{
+    width: 60rem;
+    height: 2.5rem;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    text-indent: 1.5rem;
+}

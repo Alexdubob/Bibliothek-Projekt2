@@ -28,7 +28,9 @@ import { SearchComponent } from './search/search.component';
     LoginComponent,
     ProfileComponent,
     ListComponent,
-    SearchComponent
+    SearchComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
