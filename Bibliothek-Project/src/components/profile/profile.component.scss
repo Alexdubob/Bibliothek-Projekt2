@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    height: 250px;
+    background-color: var(--darkblue);
+    justify-content: flex-start;
+    margin-left: -10px;
+    margin-right: -10px;
+    align-items: end;
+    gap: 1rem;
+    padding: 1rem;
+    padding-left: 10rem;
+}
+
+.navigation {
+    display: flex;
+    background-color: var(--grey);
+    color: var(--darkblue);
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2rem;
+
+    #overview, #favourites, #anime-list {
+        &:hover {
+            color: var(--heavyPurple);
+            cursor: pointer;
+        }
+    }
+
+}
+
+.activities {
+    display: flex;
+    padding-top: 1rem;
+    background-color:rgba(200, 200, 200);
+    color: var(--heavyPurple);
+    width: 600px;
+    height: 150px;
+    justify-content: center;
+    gap: 2rem;
+}
+

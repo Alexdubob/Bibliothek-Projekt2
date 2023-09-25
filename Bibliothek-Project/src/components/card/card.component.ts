@@ -8,6 +8,12 @@ import { Component, Input } from '@angular/core';
 export class CardComponent {
 @Input() text: string = "";
 @Input() img: string = "";
+isStarred = false;
+
+toggleStar(){
+  this.isStarred = !this.isStarred;
+}
+
 
 
 }
