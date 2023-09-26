@@ -27,6 +27,11 @@ cardImages = [
   "../../assets/img/img7.jpg",
   
 ]
+testUser=[{
+  username: "alex",
+  password: "123"
+}]
+
 
   title = 'Bibliothek-Project';
 }

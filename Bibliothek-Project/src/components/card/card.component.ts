@@ -8,10 +8,19 @@ import { Component, Input } from '@angular/core';
 export class CardComponent {
 @Input() text: string = "";
 @Input() img: string = "";
-isStarred = false;
+isFavorite = false;
+hovered = false;
 
-toggleStar(){
-  this.isStarred = !this.isStarred;
+toggleFavorite(){
+  this.isFavorite = !this.isFavorite;
+}
+
+showFavoriteIcon(){
+  this.hovered = true;
+}
+
+hideFavoriteIcon(){
+  this.hovered = false;
 }
 
 
