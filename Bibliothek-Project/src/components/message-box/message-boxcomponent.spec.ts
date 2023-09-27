@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LogoutDialogComponent } from './logout-dialog.component';
+import { MessageBoxComponent } from './message-box.component';
 
 describe('LogoutDialogComponent', () => {
-  let component: LogoutDialogComponent;
-  let fixture: ComponentFixture<LogoutDialogComponent>;
+  let component: MessageBoxComponent;
+  let fixture: ComponentFixture<MessageBoxComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [LogoutDialogComponent]
+      declarations: [MessageBoxComponent]
     });
-    fixture = TestBed.createComponent(LogoutDialogComponent);
+    fixture = TestBed.createComponent(MessageBoxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

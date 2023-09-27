@@ -1,8 +1,8 @@
 .navbar{
     display: flex;
     justify-content: space-between;
-    background-color: var(--darkblue);
-    color: var(--purplePain);
+    background-color: var(--orange);
+    color: var(--white);
     height: 3rem;
     padding: 15px;
     border-radius: 4px;
@@ -20,4 +20,9 @@
 a{
     text-decoration: none;
     color: inherit;
+    &:hover {
+        color: var(--black);
+        cursor: pointer;
+    }
+
 }

@@ -1,8 +1,18 @@
-<div class="card" (mouseenter)="showFavoriteIcon()" (mouseleave)="hideFavoriteIcon()">
-    <button (click)="toggleFavorite()">
-        <mat-icon>{{ isFavorite ? 'star' : 'star_border' }}</mat-icon>
-      </button>
-    <img src="{{img}}">
+<div class="card">
 
-    <p>{{text}}</p>
+  <button class="menu-btn" mat-icon-button [matMenuTriggerFor]="menu"> <mat-icon>add</mat-icon></button>
+  <mat-menu #menu="matMenu">
+
+    <button mat-menu-item (click)="toggleFavorite()">
+      <mat-icon>{{ isFavorite ? 'star' : 'star_border' }}</mat-icon>
+    </button>
+    <button mat-menu-item><mat-icon>done</mat-icon></button>
+    <button mat-menu-item><mat-icon>schedule</mat-icon></button>
+    <button mat-menu-item><mat-icon></mat-icon></button>
+  </mat-menu>
+
+
+  <img src="{{img}}">
+
+  <p>{{text}}</p>
 </div>

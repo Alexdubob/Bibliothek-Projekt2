@@ -10,13 +10,15 @@
     --mediumPurple: #d0bdf4;
     --purplePain: #8458B3;
     --heavyPurple: #494d60;
+    --light-orange: #fe7a4e80;
+    --orange: #fe794e;
     --mainFont: Luminari, fantasy ;
 }
 
 
 body{
-    background-color: var(--grey);
-    color: var(--purplePain);
+    background-color: var(--white);
+    color: var(--white);
     font-family: var(--mainFont);
     height: 100vh;
 }

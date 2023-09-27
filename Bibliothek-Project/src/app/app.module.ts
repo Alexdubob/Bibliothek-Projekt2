@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from 'src/components/header/header.component';
 import { CardComponent } from 'src/components/card/card.component';
-import { SearchbarComponent } from 'src/components/searchbar/searchbar.component';
 import { LoginComponent } from 'src/components/login/login.component';
 import { ProfileComponent } from 'src/components/profile/profile.component';
 import { ListComponent } from 'src/components/list/list.component';
@@ -19,17 +18,20 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog'; 
+import { MatButtonModule } from '@angular/material/button';
+import { MessageBoxComponent } from 'src/components/message-box/message-box.component';
+import { Router, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CardComponent,
-    SearchbarComponent,
     LoginComponent,
     ProfileComponent,
     ListComponent,
-    SearchComponent
+    SearchComponent,
+    MessageBoxComponent
   ],
 
   imports: [
@@ -45,6 +47,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatSnackBarModule,
     ReactiveFormsModule,
     MatDialogModule,
+    MatButtonModule,
     
   ],
   providers: [],

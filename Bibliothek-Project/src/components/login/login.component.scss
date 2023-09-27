@@ -10,11 +10,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: var(--white);
+    background-color: var(--light-orange);
     width: 350px;
     height: 450px;
     border-radius: 8px; 
     input{
+        text-align: center;
         width: 230px;
         margin-bottom: 0.5rem;
         height: 32px;
@@ -22,9 +23,9 @@
         color: var(--grey);
         font-size: 1rem;
         border: none;
-        border-bottom: 2px solid var(--purplePain);
+        border-bottom: 2px solid var(--orange);
         outline: none;
-        color: var(--purplePain);
+        color: var(--orange);
         font-weight: bold;
     }
 
@@ -32,30 +33,40 @@
         margin-top: 2rem;
         width: 180px;
         height: 32px;
-        background-color: var(--heavyPurple);
-        color: var(--grey);
+        background-color: var(--orange);
+        color: var(--white);
         border-radius: 6px;
         cursor: pointer;
-        border: 2px solid var(--purplePain);
-        background-color: var(--grey);
-        color: var(--purplePain);
+        border: 2px solid var(--orange);
+        background-color: var(--white);
+        color: var(--orange);
         &:hover{
-            background-color: var(--purplePain);
-            color: var(--grey);
+            background-color: var(--orange);
+            color: var(--white);
         }
     }
    
 }
 h1{
-    color: var(--purplePain);
+    color: var(--orange);
     font-family: var(--mainFont);
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: bold;
     margin-top: 2rem;
+    text-align: center;
 }
 
 form{
     display: flex;
     flex-direction: column;
+}
+.h1-container{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
 }

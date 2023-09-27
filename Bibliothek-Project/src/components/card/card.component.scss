@@ -1,20 +1,35 @@
 .card{
+    position: relative;
     min-height: 250px;
     width: 220px;
-    background-color: var(--darkblue);
-    color: var(--grey);
+    background-color: var(--orange);
+    color: var(--white);
     border: 1px solid rgba($color: #000000, $alpha: 0.2);
     border-radius: 6px;
     overflow: hidden;
     font-family: var(--mainFont);
     text-align: center;
     
+    
     img{
         width: 220px;
         height: 250px;
         max-width: 220px;
+        display: block;
     }
     p{
         font-size: 18px;
     }
+}
+.menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3 ease;
+    background-color: var(--orange);
+    
+}
+.card:hover .menu-btn{
+    opacity: 1;
 }

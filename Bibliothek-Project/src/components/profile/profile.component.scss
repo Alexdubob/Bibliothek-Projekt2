@@ -1,11 +1,10 @@
 .header {
     display: flex;
     height: 250px;
-    background-color: var(--darkblue);
+    background-color: var(--orange);
+    color: var(--white);
     justify-content: flex-start;
-    margin-left: -10px;
-    margin-right: -10px;
-    align-items: end;
+    align-items: flex-end;
     gap: 1rem;
     padding: 1rem;
     padding-left: 10rem;
@@ -13,17 +12,19 @@
 
 .navigation {
     display: flex;
-    background-color: var(--grey);
-    color: var(--darkblue);
+    background-color: var(--light-orange);
+    color: var(--white);
     height: 40px;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     font-size: 2rem;
 
-    #overview, #favourites, #anime-list {
+    #overview,
+    #favourites,
+    #anime-list {
         &:hover {
-            color: var(--heavyPurple);
+            color: var(--orange);
             cursor: pointer;
         }
     }
@@ -33,11 +34,21 @@
 .activities {
     display: flex;
     padding-top: 1rem;
-    background-color:rgba(200, 200, 200);
-    color: var(--heavyPurple);
-    width: 600px;
-    height: 150px;
-    justify-content: center;
-    gap: 2rem;
+    color: var(--white);
+    justify-content: space-between;
+    padding: 5rem;
+    h2{
+        font-size: 1.8rem;
+    }
+    .statistics, .friends{
+        padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        border: 3px solid var(--orange);
+        border-radius: 3px;
+        width: 35rem;
+        height: 20rem;
+        background-color: var(--light-orange);
 }
-
+}

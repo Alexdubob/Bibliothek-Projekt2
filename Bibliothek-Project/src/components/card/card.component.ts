@@ -9,19 +9,12 @@ export class CardComponent {
 @Input() text: string = "";
 @Input() img: string = "";
 isFavorite = false;
-hovered = false;
 
 toggleFavorite(){
   this.isFavorite = !this.isFavorite;
 }
 
-showFavoriteIcon(){
-  this.hovered = true;
-}
 
-hideFavoriteIcon(){
-  this.hovered = false;
-}
 
 
 
