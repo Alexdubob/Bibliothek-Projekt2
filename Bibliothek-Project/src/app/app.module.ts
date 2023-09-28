@@ -47,7 +47,7 @@ import { Router, Routes } from '@angular/router';
     MatSnackBarModule,
     ReactiveFormsModule,
     MatDialogModule,
-    MatButtonModule,
+    MatButtonModule
     
   ],
   providers: [],

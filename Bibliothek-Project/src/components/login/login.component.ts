@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router, Routes } from '@angular/router';
-import { ProfileComponent } from '../profile/profile.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',

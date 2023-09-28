@@ -11,8 +11,6 @@ export class MessageBoxComponent {
 
 
   logout(){
-    this.router.navigate(['/List'])
+    this.router.navigate(['/list'])
   }
-
-
 }
