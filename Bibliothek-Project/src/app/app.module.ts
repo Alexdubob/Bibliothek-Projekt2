@@ -20,7 +20,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog'; 
 import { MatButtonModule } from '@angular/material/button';
 import { MessageBoxComponent } from 'src/components/message-box/message-box.component';
-import { Router, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { AnimeService } from './AnimeService';
+
 
 @NgModule({
   declarations: [
@@ -47,10 +49,13 @@ import { Router, Routes } from '@angular/router';
     MatSnackBarModule,
     ReactiveFormsModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
     
   ],
-  providers: [],
+  providers: [
+    AnimeService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

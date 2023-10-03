@@ -1,36 +1,25 @@
 <div class="container">
-
-    <section class="currently-trending">
-        <h2>Currently Trending</h2>
+    <section class="upcoming-season">
+        <h2>Upcoming Season</h2>
         <div class="card-container">
-            <app-card  *ngFor="let image of cardImages; let i = index" [img]="cardImages[i]" [text]="cardTexts[i]">
+            <app-card *ngFor="let Anime of upcomingAnimeSeasonList" [img]="Anime.img" [text]="Anime.title">
             </app-card>
-            <app-card *ngFor="let image of cardImages; let i = index" [img]="cardImages[i]" [text]="cardTexts[i]">
-            </app-card>
-
         </div>
     </section>
 
-    <section class="current-season">
+    <!-- <section class="current-season">
         <h2>Current Season</h2>
-
-        
-    </section>
-
-    <section class="top-ranked">
-        <h2>Top Ranked</h2>
         <div class="card-container">
-            <app-card *ngFor="let image of cardImages; let i = index" [img]="cardImages[i]" [text]="cardTexts[i]">
+            <app-card *ngFor="let anime of currentAnimeSeasonList.slice(0, 5)" [img]="anime.img" [text]="anime.title">
             </app-card>
-
         </div>
     </section>
+
 
     <section class="all-time-popular">
         <h2>All Time Popular</h2>
         <div class="card-container">
-            <app-card *ngFor="let image of cardImages; let i = index" [img]="cardImages[i]" [text]="cardTexts[i]">
+            <app-card *ngFor="let anime of topAnimeList.slice(0, 5)" [img]="anime.img" [text]="anime.title">
             </app-card>
-
         </div>
-    </section>
+    </section> -->
