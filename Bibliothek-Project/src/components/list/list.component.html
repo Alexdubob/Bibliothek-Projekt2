@@ -1,25 +1,32 @@
 <div class="container">
-    <section class="upcoming-season">
-        <h2>Upcoming Season</h2>
-        <div class="card-container">
-            <app-card *ngFor="let Anime of upcomingAnimeSeasonList" [img]="Anime.img" [text]="Anime.title">
-            </app-card>
-        </div>
-    </section>
-
-    <!-- <section class="current-season">
-        <h2>Current Season</h2>
-        <div class="card-container">
-            <app-card *ngFor="let anime of currentAnimeSeasonList.slice(0, 5)" [img]="anime.img" [text]="anime.title">
-            </app-card>
-        </div>
-    </section>
-
 
     <section class="all-time-popular">
-        <h2>All Time Popular</h2>
-        <div class="card-container">
-            <app-card *ngFor="let anime of topAnimeList.slice(0, 5)" [img]="anime.img" [text]="anime.title">
-            </app-card>
-        </div>
-    </section> -->
+            <h2>All Time Popular</h2>
+            <div class="card-container">
+                <app-card *ngFor="let Anime of topAnimeList" [img]="Anime.images.jpg.image_url"
+                [title]="Anime.title"></app-card>
+            </div>
+        </section>
+        
+        
+        <section class="upcoming-season">
+            <h2>Current Season</h2>
+            <div class="card-container">
+                <app-card *ngFor="let Anime of currentAnimeSeasonList" [img]="Anime.images.jpg.image_url"
+                [title]="Anime.title"></app-card>
+                
+            </div>
+        </section>
+        
+        
+        <section class="upcoming-season">
+            <h2>Upcoming Season</h2>
+            <div class="card-container">
+                <app-card *ngFor="let Anime of upcomingAnimeSeasonList" [img]="Anime.images.jpg.image_url"
+                [title]="Anime.title"></app-card>
+            </div>
+        </section>
+    </div>
+
+
+

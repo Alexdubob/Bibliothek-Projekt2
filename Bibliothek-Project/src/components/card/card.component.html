@@ -9,7 +9,7 @@
     <button mat-menu-item><mat-icon></mat-icon></button>
   </mat-menu>
 
-  <img  [src]="Anime.image_url" [alt]="Anime.title">
+  <img  [src]="img" [alt]="title">
 
-  <p>{{ Anime.title }}</p>
+  <p>{{ title | truncate:35 }}</p>
 </div>

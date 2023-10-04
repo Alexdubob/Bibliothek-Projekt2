@@ -22,6 +22,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MessageBoxComponent } from 'src/components/message-box/message-box.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AnimeService } from './AnimeService';
+import { TruncatePipe } from 'src/pipes/truncate-pipe';
+
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { AnimeService } from './AnimeService';
     ProfileComponent,
     ListComponent,
     SearchComponent,
-    MessageBoxComponent
+    MessageBoxComponent,
+    TruncatePipe
   ],
 
   imports: [

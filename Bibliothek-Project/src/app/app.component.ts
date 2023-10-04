@@ -7,12 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-testUser=[{
-  username: "alex",
-  password: "123"
-}]
-
-
   title = 'Bibliothek-Project';
 }
 
