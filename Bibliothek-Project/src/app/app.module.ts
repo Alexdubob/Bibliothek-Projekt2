@@ -23,6 +23,10 @@ import { MessageBoxComponent } from 'src/components/message-box/message-box.comp
 import { HttpClientModule } from '@angular/common/http';
 import { AnimeService } from './AnimeService';
 import { TruncatePipe } from 'src/pipes/truncate-pipe';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { SignInComponent } from '../components/sign-in/sign-in.component'; 
 
 
 
@@ -36,7 +40,9 @@ import { TruncatePipe } from 'src/pipes/truncate-pipe';
     ListComponent,
     SearchComponent,
     MessageBoxComponent,
-    TruncatePipe
+    TruncatePipe,
+    SignInComponent,
+    
   ],
 
   imports: [
@@ -54,6 +60,10 @@ import { TruncatePipe } from 'src/pipes/truncate-pipe';
     MatDialogModule,
     MatButtonModule,
     HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule
+    
     
   ],
   providers: [

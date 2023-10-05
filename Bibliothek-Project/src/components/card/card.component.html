@@ -1,12 +1,12 @@
 <div class="card">
   <button class="menu-btn" mat-icon-button [matMenuTriggerFor]="menu"> <mat-icon>add</mat-icon></button>
-  <mat-menu #menu="matMenu">
+  <mat-menu #menu="matMenu" class="matMenuCustomize">
     <button mat-menu-item (click)="toggleFavorite()">
       <mat-icon>{{ isFavorite ? 'star' : 'star_border' }}</mat-icon>
-    </button>
-    <button mat-menu-item><mat-icon>done</mat-icon></button>
-    <button mat-menu-item><mat-icon>schedule</mat-icon></button>
-    <button mat-menu-item><mat-icon></mat-icon></button>
+    Favourite</button>
+    <button class="finished-button" mat-menu-item><mat-icon>done</mat-icon>Finished</button>
+    <button class="plan-button" mat-menu-item><mat-icon>schedule</mat-icon>Plan to watch</button>
+    <button class="watching-button" mat-menu-item><mat-icon>play_arrow</mat-icon>Watching</button>
   </mat-menu>
 
   <img  [src]="img" [alt]="title">

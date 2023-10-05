@@ -6,6 +6,17 @@
 
 .searchbar{
     margin-top: 3rem;
+    button{
+        margin-left: 2rem;
+        width: 5rem;
+        height: 2.5rem;
+        background-color: var(--orange);
+        color: var(--white);
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 6px;
+
+    }
 }
 
 input{

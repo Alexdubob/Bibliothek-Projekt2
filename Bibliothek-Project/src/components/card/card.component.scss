@@ -30,6 +30,14 @@
     background-color: var(--orange);
     
 }
+.matMenuCustomize{
+    background-color: var(--orange)!important;
+
+}
 .card:hover .menu-btn{
     opacity: 1;
+}
+
+.watching-button{
+    background-color: var(--orange);
 }

@@ -1,11 +1,9 @@
 <div class="container">
     <div class="searchbar">
-        <input type="text" placeholder="Search for Anime">
+        <input [(ngModel)]="searchTerm" placeholder="Suche nach Anime">
+        <button (click)="search()">Suchen</button>
+        <div *ngIf="searchResults">
+            <app-card></app-card>
+        </div>
     </div>
-
-    <div class="search-result">
-
-        
-    </div>
-
 </div>
