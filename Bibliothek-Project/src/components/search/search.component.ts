@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { AnimeService } from 'src/app/AnimeService';
+import { AnimeService } from 'src/services/AnimeService';
 
 @Component({
   selector: 'app-search',

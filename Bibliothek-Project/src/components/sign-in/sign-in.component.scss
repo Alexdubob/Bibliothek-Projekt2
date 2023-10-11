@@ -1,0 +1,74 @@
+.container{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 800px;
+}
+
+.login-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--light-orange);
+    width: 350px;
+    height: 450px;
+    border-radius: 8px; 
+    input{
+        text-align: center;
+        width: 230px;
+        margin-bottom: 0.5rem;
+        height: 32px;
+        background-color: var(--white);
+        color: var(--grey);
+        font-size: 1rem;
+        border: none;
+        border-bottom: 2px solid var(--orange);
+        outline: none;
+        color: var(--orange);
+        font-weight: bold;
+    }
+
+    button{
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        width: 200px;
+        height: 40px;
+        background-color: var(--orange);
+        color: var(--white);
+        border-radius: 6px;
+        cursor: pointer;
+        border: 2px solid var(--orange);
+        background-color: var(--white);
+        color: var(--orange);
+        &:hover{
+            background-color: var(--orange);
+            color: var(--white);
+        }
+    }
+   
+}
+h1{
+    color: var(--orange);
+    font-family: var(--mainFont);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+.h1-container{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+}

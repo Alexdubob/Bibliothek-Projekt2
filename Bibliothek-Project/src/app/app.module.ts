@@ -21,7 +21,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MessageBoxComponent } from 'src/components/message-box/message-box.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AnimeService } from './AnimeService';
+import { AnimeService } from '../services/AnimeService';
 import { TruncatePipe } from 'src/pipes/truncate-pipe';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

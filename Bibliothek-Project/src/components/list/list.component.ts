@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AnimeService } from 'src/app/AnimeService';
+import { AnimeService } from 'src/services/AnimeService';
 import { CardComponent } from '../card/card.component';
 
 interface Anime {

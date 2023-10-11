@@ -1,6 +1,12 @@
+import { HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router, RouterLink } from '@angular/router';
+import { UserService } from 'src/services/UserService';
+
+  
+
 
 @Component({
   selector: 'app-login',
@@ -11,25 +17,39 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   loginForm = new FormGroup({
     username: new FormControl('', Validators.required),
-    password: new FormControl('', Validators.required)
+    password: new FormControl('', Validators.required),
+    errorMessage: new FormControl(null)
   });
   
-  constructor (private router:Router){}
+  constructor (private router: Router, private userService: UserService, private snackBar: MatSnackBar){}
+
 
   login() {
-    if (this.loginForm.invalid) {
-      return;
-    }
+    const usernameControl = this.loginForm.get("username");
+    const passwordControl = this.loginForm.get("password");
 
-    const enteredUsername = this.loginForm.value.username;
-    const enteredPassword = this.loginForm.value.password;
+    if (usernameControl && passwordControl && usernameControl.value && passwordControl.value) {
+      const username = usernameControl.value;
+      const password = passwordControl.value;
 
-    if (enteredUsername === 'alex' && enteredPassword === '123') {
-      alert('Erfolgreich eingeloggt');
-      this.router.navigate(['/profile']);
-
-    } else {
-      alert('Falsche Anmeldedaten!');
-    }
+    this.userService.verifyUser(username, password).subscribe(
+      response => {
+        console.log('Erfolgreich eingeloggt:', response);
+        this.openSnackBar('Erfolgreich eingeloggt', 'Schließen');
+        this.router.navigate(['/profile'])        
+      },
+      error => {
+        console.error('Fehler beim Einloggen:', error);
+        this.openSnackBar('Falsche Login Daten', 'Schließen');
+      }
+    );
   }
+  }
+
+
+openSnackBar(message: string, action: string) {
+  this.snackBar.open(message, action, {
+    duration: 4000,
+  });
+}
 }

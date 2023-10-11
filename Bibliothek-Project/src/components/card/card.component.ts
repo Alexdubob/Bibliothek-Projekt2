@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AnimeService } from 'src/app/AnimeService';
+import { AnimeService } from 'src/services/AnimeService';
 import { ListComponent } from '../list/list.component';
 import { TruncatePipe } from 'src/pipes/truncate-pipe';
 
