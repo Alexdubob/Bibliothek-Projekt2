@@ -21,7 +21,7 @@ export class UserService {
   }
 
   createUser(newUser: User): Observable<User> {
-    return this.http.post<User>(this.userApiUrl, newUser);
+    return this.http.post<User>(`${this.userApiUrl}/api/Users`, newUser);
   }
 
   updateUser(id: string, updateUser: User): Observable<any> {
@@ -35,4 +35,12 @@ export class UserService {
   verifyUser(username:string, password:string): Observable<User>{
     return this.http.post<User>(`${this.userApiUrl}/api/Users/login`,{username , password});
   }
+
+  checkUserName(username: string): Observable<boolean>{
+    const url = `${this.userApiUrl}/api/Users/checkUsername/${username}`;
+    return this.http.get<boolean>(url)
+  }
+
+
+
 }

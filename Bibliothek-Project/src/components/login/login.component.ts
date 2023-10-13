@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router, RouterLink } from '@angular/router';
+import { UserDataService } from 'src/services/UserDataService';
 import { UserService } from 'src/services/UserService';
 
   
@@ -21,8 +22,7 @@ export class LoginComponent {
     errorMessage: new FormControl(null)
   });
   
-  constructor (private router: Router, private userService: UserService, private snackBar: MatSnackBar){}
-
+  constructor (private userDataService:UserDataService ,private router: Router, private userService: UserService, private snackBar: MatSnackBar){}
 
   login() {
     const usernameControl = this.loginForm.get("username");
@@ -35,7 +35,8 @@ export class LoginComponent {
     this.userService.verifyUser(username, password).subscribe(
       response => {
         console.log('Erfolgreich eingeloggt:', response);
-        this.openSnackBar('Erfolgreich eingeloggt', 'Schließen');
+        this.userDataService.setUserData(username);
+        console.log(this.userDataService)
         this.router.navigate(['/profile'])        
       },
       error => {
@@ -45,8 +46,6 @@ export class LoginComponent {
     );
   }
   }
-
-
 openSnackBar(message: string, action: string) {
   this.snackBar.open(message, action, {
     duration: 4000,

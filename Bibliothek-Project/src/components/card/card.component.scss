@@ -10,7 +10,6 @@
     font-family: var(--mainFont);
     text-align: center;
     
-    
     img{
         width: 220px;
         height: 250px;
@@ -28,16 +27,8 @@
     opacity: 0;
     transition: opacity 0.3 ease;
     background-color: var(--orange);
-    
 }
-.matMenuCustomize{
-    background-color: var(--orange)!important;
 
-}
 .card:hover .menu-btn{
     opacity: 1;
-}
-
-.watching-button{
-    background-color: var(--orange);
 }

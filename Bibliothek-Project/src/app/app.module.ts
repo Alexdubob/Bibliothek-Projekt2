@@ -26,7 +26,8 @@ import { TruncatePipe } from 'src/pipes/truncate-pipe';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { SignInComponent } from '../components/sign-in/sign-in.component'; 
+import { SignInComponent } from '../components/sign-in/sign-in.component';
+import { StoreModule } from '@ngrx/store'; 
 
 
 
@@ -62,7 +63,8 @@ import { SignInComponent } from '../components/sign-in/sign-in.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    StoreModule.forRoot({}, {})
     
     
   ],

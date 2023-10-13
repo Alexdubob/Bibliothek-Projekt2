@@ -1,9 +1,10 @@
 export interface User {
-    username: string;
-    id: string;
-    animes_finished: string[];
-    favourite_animes: string[];
-    animes_watching: string[];
-    animes_plan_to_watch: string[];
+    Username: string;
+    Password: string;
+    Id: string;
+    Animes_finished: string[];
+    Favourite_animes: string[];
+    Animes_watching: string[];
+    Animes_plan_to_watch: string[];
 
 }
