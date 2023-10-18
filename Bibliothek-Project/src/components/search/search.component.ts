@@ -13,14 +13,19 @@ export class SearchComponent{
 
   constructor(private http: HttpClient){}
 
-  search(){
-    const apiUrl = `https://api.jikan.moe/v4/anime`;
-    this.http.get<any[]>(apiUrl, {
-      params: {
-        q: this.searchTerm
+  search() {
+    if (this.searchTerm.trim() === "") {
+      this.searchResults = [];
+      return;
+    }
+
+    this.http.get<any[]>(`https://api.jikan.moe/v4/anime`).subscribe(
+      (results) => {
+        this.searchResults = results;
+      },
+      (error) => {
+        console.error("Fehler bei der Suche:", error);
       }
-    }).subscribe(response => {
-      this.searchResults = response;
-    });
+    );
   }
 }

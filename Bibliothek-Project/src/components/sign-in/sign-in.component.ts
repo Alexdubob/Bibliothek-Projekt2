@@ -13,6 +13,7 @@ interface NewUser {
   Animes_watching: string[];
   Animes_plan_to_watch: string[];
   Id: string;
+  Friends: string[];
 }
 
 @Component({
@@ -67,7 +68,8 @@ export class SignInComponent {
             Favourite_animes: [],
             Animes_watching: [],
             Animes_plan_to_watch: [],
-            Id: ""
+            Id: "",
+            Friends:[],
           };
           console.log(newUser);
           
@@ -77,7 +79,8 @@ export class SignInComponent {
           this.userService.createUser(newUser).subscribe(
             (createdUser) => {
               console.log('Neuer Benutzer erstellt:', createdUser);
-              this.userDataService.setUserData(createdUser);
+              const username= createdUser.Username;
+              this.userDataService.setUserData({ Username: username })
               console.log(this.userDataService)
               this.openSnackBar(
                 'Benutzer erfolgreich erstellt',

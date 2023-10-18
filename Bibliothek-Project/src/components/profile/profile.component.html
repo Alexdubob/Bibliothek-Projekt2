@@ -1,17 +1,17 @@
 <section class="header">
     <div class="profile-name">
-        ProfileName
+        <h1>{{profilename}}</h1>
     </div>
 </section>
 
 <section class="navigation">
-    <div id="overview">
+    <div (click)="toggleTotalAnimesVisibility()" id="overview">
         Overview
     </div>
-    <div id="favourites">
+    <div (click)="toggleFavouriteAnimesVisibility()" id="favourites">
         Favourites
     </div>
-    <div id="anime-list">
+    <div (click)="toggleAnimeListVisibility()" id="anime-list">
         Anime List
     </div>
 </section>
@@ -20,16 +20,32 @@
 
 <section class="activities">
 
-    <div class="friends">
+    <!-- <div class="friends">
         <h2>Friends</h2>
-    </div>
+    </div>  -->
 
-    <div class="statistics">
+    <div *ngIf="isTotalAnimesVisible" id="statistics">
         <div class="total-animes">
             <h2>Total Animes watched</h2>
         </div>
-        <div class="days-watched">
-           <h2>Days Watched</h2>
+        <h2>{{totalAnimes}}</h2>
+    </div>
+
+    <div *ngIf="isFavouritesAnimesVisible" id="favourites">
+        <app-favourite-animes></app-favourite-animes>
+    </div>
+
+    <div *ngIf="isAnimeListVisible" id="anime-list">
+        <div class="card-container">
+            <app-finished-animes></app-finished-animes>
+        </div>
+        <div class="card-container">
+            <app-plan-to-watch-animes></app-plan-to-watch-animes>
+        </div>
+        <div class="card-container">
+            <app-animes-watching></app-animes-watching>
         </div>
     </div>
+
+
 </section>

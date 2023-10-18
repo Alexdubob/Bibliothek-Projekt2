@@ -1,17 +1,20 @@
 <div class="navbar">
     <div class="Logo">
-        <div><a routerLink="/list"><img  src="../../assets/img/Logo-white.png" alt=""></a></div>
+        <div><a routerLink="/list"><img src="../../assets/img/Logo-white.png" alt=""></a></div>
     </div>
     <div class="nav">
+        <!-- <mat-slide-toggle></mat-slide-toggle> -->
         <a routerLink="/search">Search</a>
         <a routerLink="/list">List</a>
-        <a routerLink="/login">Login</a>
-        <!-- <div *ngIf="username?.isLoggedIn"> -->
+
+        <div *ngIf="logedIn()">
             <a routerLink="/profile">Profile</a>
-        <!-- </div> -->
-        <!-- <div *ngIf="username?.isLoggedIn> -->
-           <a (click)="openDialog()">Logout</a>
-        <!-- </div> -->
-        <a routerLink="/sign-in">Sign In</a>
+            <a (click)="openDialog()">Logout</a>
+        </div>
+        
+        <div *ngIf="!logedIn()">
+            <a routerLink="/login">Login</a>
+            <a routerLink="/sign-in">Sign In</a>
+        </div>
     </div>
 </div>

@@ -4,7 +4,7 @@
             <h2>All Time Popular</h2>
             <div class="card-container">
                 <app-card *ngFor="let Anime of topAnimeList" [img]="Anime.images.jpg.image_url"
-                [title]="Anime.title"></app-card>
+                [title]="Anime.title" [anime]="Anime"></app-card>
             </div>
         </section>
         

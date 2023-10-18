@@ -34,21 +34,43 @@
 .activities {
     display: flex;
     padding-top: 1rem;
-    color: var(--white);
-    justify-content: space-between;
+    color: var(--orange);
+    justify-content: space-around;
     padding: 5rem;
-    h2{
+
+    #anime-list{
+        flex-direction: row;
+        }
+    h2 {
         font-size: 1.8rem;
     }
-    .statistics, .friends{
-        padding: 2rem;
+
+    #statistics,
+    #friends
+     {
         display: flex;
-        justify-content: space-between;
+        padding: 2rem;
         gap: 3rem;
         border: 3px solid var(--orange);
         border-radius: 3px;
-        width: 35rem;
+        width: 45rem;
         height: 20rem;
         background-color: var(--light-orange);
+        
+        &#statistics {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+    }
 }
+
+
+
+.profile-name {
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
 }

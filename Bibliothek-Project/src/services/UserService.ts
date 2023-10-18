@@ -17,7 +17,12 @@ export class UserService {
   }
 
   getUserById(id: string): Observable<User> {
-    return this.http.get<User>(`${this.userApiUrl}/${id}`);
+    return this.http.get<User>(`${this.userApiUrl}/api/Users/${id}`);
+  }
+
+  getUserByUsername(username: string): Observable<User>{
+    const url = `${this.userApiUrl}/api/Users/Username/${username}`;
+    return this.http.get<User>(url)
   }
 
   createUser(newUser: User): Observable<User> {
@@ -25,7 +30,7 @@ export class UserService {
   }
 
   updateUser(id: string, updateUser: User): Observable<any> {
-    return this.http.put(`${this.userApiUrl}/${id}`, updateUser);
+    return this.http.put(`${this.userApiUrl}/api/Users/${id}`, updateUser);
   }
 
   deleteUser(id: string): Observable<any> {
@@ -40,6 +45,7 @@ export class UserService {
     const url = `${this.userApiUrl}/api/Users/checkUsername/${username}`;
     return this.http.get<boolean>(url)
   }
+
 
 
 

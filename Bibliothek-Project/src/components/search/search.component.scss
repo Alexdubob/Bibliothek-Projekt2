@@ -2,12 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .searchbar{
     margin-top: 3rem;
     button{
         margin-left: 2rem;
+        margin-bottom: 2rem;
         width: 5rem;
         height: 2.5rem;
         background-color: var(--orange);

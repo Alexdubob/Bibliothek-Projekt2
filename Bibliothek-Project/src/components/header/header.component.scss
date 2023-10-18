@@ -14,12 +14,13 @@
 .nav{
     display: flex;
     justify-content: flex-end;
-    gap: 20px;
     padding-top: 12px
 }
 a{
     text-decoration: none;
     color: inherit;
+    padding-left: 20px;
+    
     &:hover {
         color: var(--black);
         cursor: pointer;

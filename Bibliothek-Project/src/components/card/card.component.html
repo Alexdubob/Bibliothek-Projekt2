@@ -1,15 +1,20 @@
 <div class="card">
   <button class="menu-btn" mat-icon-button [matMenuTriggerFor]="menu"> <mat-icon>add</mat-icon></button>
   <mat-menu #menu="matMenu" class="matMenuCustomize">
-    <button mat-menu-item (click)="toggleFavorite()">
-      <mat-icon>{{ isFavorite ? 'star' : 'star_border' }}</mat-icon>
-    Favourite</button>
-    <button class="finished-button" mat-menu-item><mat-icon>done</mat-icon>Finished</button>
-    <button class="plan-button" mat-menu-item><mat-icon>schedule</mat-icon>Plan to watch</button>
-    <button class="watching-button" mat-menu-item><mat-icon>play_arrow</mat-icon>Watching</button>
+    <button mat-menu-item (click)="addToFavourites()">
+      <mat-icon>star</mat-icon>Favourite</button>
+
+    <button (click)="addToFinishedAnimes()" class="finished-button"
+      mat-menu-item><mat-icon>done</mat-icon>Finished</button>
+
+    <button (click)="addToPlannedAnimes()" class="plan-button" mat-menu-item><mat-icon>schedule</mat-icon>Plan
+      towatch</button>
+
+    <button (click)="addToWatchingAnimes()" class="watching-button"
+      mat-menu-item><mat-icon>play_arrow</mat-icon>Watching</button>
   </mat-menu>
 
-  <img  [src]="img" [alt]="title">
+  <img [src]="img" [alt]="title">
 
   <p>{{ title | truncate:35 }}</p>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AnimeService } from 'src/services/AnimeService';
 import { CardComponent } from '../card/card.component';
+import { AnimeDataService } from 'src/services/AnimeDataService';
 
 interface Anime {
   title: string;
@@ -18,7 +19,8 @@ export class ListComponent implements OnInit{
   upcomingAnimeSeasonList: any[]= [];
   topAnimeList: any[]= [];
 
-  constructor(private animeService: AnimeService){}
+  constructor(private animeService: AnimeService, private animeDataServie: AnimeDataService){}
+
 
   ngOnInit(): void {
       this.animeService.getSeasonNow().subscribe(

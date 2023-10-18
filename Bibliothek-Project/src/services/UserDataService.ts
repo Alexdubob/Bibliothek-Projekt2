@@ -4,13 +4,18 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserDataService {
-  private userData: any; // Hier kannst du die Benutzerdaten speichern
+  private readonly storageKey = "";
 
   setUserData(data: any) {
-    this.userData = data;
-  }
+    localStorage.setItem(this.storageKey, JSON.stringify(data));  }
 
   getUserData() {
-    return this.userData;
+    const storedData = localStorage.getItem(this.storageKey);
+    return storedData ? JSON.parse(storedData) : null;
+  }
+
+  clearUserData(){
+    localStorage.removeItem(this.storageKey)
+  
   }
 }
