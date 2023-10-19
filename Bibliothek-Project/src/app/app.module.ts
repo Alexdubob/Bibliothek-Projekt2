@@ -28,10 +28,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { SignInComponent } from '../components/sign-in/sign-in.component';
 import { StoreModule } from '@ngrx/store';
-import { FavouriteAnimesComponent } from '../components/profile/favourite-animes/favourite-animes.component'; 
-import { FinishedAnimesComponent } from '../components/profile/finished-animes/finished-animes.component';
-import { PlanToWatchAnimesComponent } from '../components/profile/plan-to-watch-animes/plan-to-watch-animes.component';
-import { AnimesWatchingComponent } from '../components/profile/animes-watching/animes-watching.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle'; 
 
 
@@ -47,11 +43,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     SearchComponent,
     MessageBoxComponent,
     TruncatePipe,
-    SignInComponent,
-    FavouriteAnimesComponent,
-    FinishedAnimesComponent,
-    PlanToWatchAnimesComponent,
-    AnimesWatchingComponent,
+    SignInComponent
     
   ],
 

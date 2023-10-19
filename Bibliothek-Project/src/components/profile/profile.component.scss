@@ -38,16 +38,16 @@
     justify-content: space-around;
     padding: 5rem;
 
-    #anime-list{
+    #anime-list {
         flex-direction: row;
-        }
+    }
+
     h2 {
         font-size: 1.8rem;
     }
 
     #statistics,
-    #friends
-     {
+    #friends {
         display: flex;
         padding: 2rem;
         gap: 3rem;
@@ -56,7 +56,7 @@
         width: 45rem;
         height: 20rem;
         background-color: var(--light-orange);
-        
+
         &#statistics {
             flex-direction: column;
             justify-content: center;
@@ -66,11 +66,29 @@
     }
 }
 
-
+h1{
+    font-size: 3rem;
+    font-weight: bold;
+    padding-top: 4rem;
+}
 
 .profile-name {
     h1 {
         font-size: 3rem;
         font-weight: bold;
+    }
+}
+
+
+
+.card-container {
+    padding-top: 10px;
+    display: flex;
+    gap: 1.1rem;
+    flex-wrap: wrap;
+
+    :hover {
+        cursor: pointer;
+        transform: scale(1.1);
     }
 }

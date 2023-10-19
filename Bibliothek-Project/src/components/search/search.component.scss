@@ -1,13 +1,15 @@
 .container {
+    margin-left: 120px;
+    margin-right: 120px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
 .searchbar{
     margin-top: 3rem;
-    button{
+    display: flex;
+    justify-content: center;
+        button{
         margin-left: 2rem;
         margin-bottom: 2rem;
         width: 5rem;
@@ -17,7 +19,6 @@
         font-size: 1rem;
         font-weight: bold;
         border-radius: 6px;
-
     }
 }
 
@@ -30,3 +31,15 @@ input{
     color: var(--orange);
     border-color: var(--orange);
 }
+
+    .card-container{
+        padding-top: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 1.1rem;
+        flex-wrap: wrap;
+        :hover{
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }

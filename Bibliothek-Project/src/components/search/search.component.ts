@@ -1,6 +1,9 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AnimeService } from 'src/services/AnimeService';
+import { UserDataService } from 'src/services/UserDataService';
+import { UserService } from 'src/services/UserService';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-search',
@@ -8,24 +11,24 @@ import { AnimeService } from 'src/services/AnimeService';
   styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent{
-  searchTerm: string ="";
+  searchTerm: string = "";
   searchResults: any[] = [];
 
-  constructor(private http: HttpClient){}
+  constructor(
+    private animeService: AnimeService,  
+    ){}
 
-  search() {
-    if (this.searchTerm.trim() === "") {
-      this.searchResults = [];
-      return;
-    }
-
-    this.http.get<any[]>(`https://api.jikan.moe/v4/anime`).subscribe(
-      (results) => {
-        this.searchResults = results;
-      },
-      (error) => {
-        console.error("Fehler bei der Suche:", error);
-      }
-    );
+    search() {
+      this.animeService.searchAnime(this.searchTerm).subscribe(
+          (searchResults: any) => {
+              this.searchResults = searchResults.data;
+              console.log(this.searchResults)
+          },
+          (error) => {
+              console.error('Fehler beim Abrufen der Suchergebnisse', error);
+          }
+      );
   }
 }
+
+

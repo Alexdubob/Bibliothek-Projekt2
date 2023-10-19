@@ -1,13 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AnimeService } from 'src/services/AnimeService';
-import { CardComponent } from '../card/card.component';
 import { AnimeDataService } from 'src/services/AnimeDataService';
 
-interface Anime {
-  title: string;
-  image_url: string;
-  synopsis: string;
-}
+
 
 @Component({
   selector: 'app-list',

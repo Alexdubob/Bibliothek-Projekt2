@@ -1,26 +1,32 @@
-.container{
+.container {
     margin-left: 120px;
     margin-right: 120px;
     display: flex;
     flex-wrap: wrap;
 }
-.card-container{
+
+.card-container {
     padding-top: 10px;
     display: flex;
     gap: 1.1rem;
     flex-wrap: wrap;
-    :hover{
+
+    :hover {
         cursor: pointer;
         transform: scale(1.1);
     }
 }
-.header{
+
+.header {
     top: 0;
     position: sticky;
 }
 
-h2{
+h2 {
     padding-top: 4rem;
     font-size: 3rem;
     color: var(--orange);
 }
+
+
+

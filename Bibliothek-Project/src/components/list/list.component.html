@@ -13,7 +13,7 @@
             <h2>Current Season</h2>
             <div class="card-container">
                 <app-card *ngFor="let Anime of currentAnimeSeasonList" [img]="Anime.images.jpg.image_url"
-                [title]="Anime.title"></app-card>
+                [title]="Anime.title" [anime]="Anime"></app-card>
                 
             </div>
         </section>
@@ -23,7 +23,7 @@
             <h2>Upcoming Season</h2>
             <div class="card-container">
                 <app-card *ngFor="let Anime of upcomingAnimeSeasonList" [img]="Anime.images.jpg.image_url"
-                [title]="Anime.title"></app-card>
+                [title]="Anime.title" [anime]="Anime"></app-card>
             </div>
         </section>
     </div>

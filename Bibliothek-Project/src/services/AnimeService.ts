@@ -9,7 +9,6 @@ export class AnimeService{
     private SeasonNowUrl = "https://api.jikan.moe/v4/seasons/now";
     private SeasonUpcomingUrl = "https://api.jikan.moe/v4/seasons/upcoming";
     private TopAnimeUrl = "https://api.jikan.moe/v4/top/anime";
-    private AnimeUrl = "https://api.jikan.moe/v4/anime?q=";
 
     constructor (private http: HttpClient){}
 
@@ -25,12 +24,13 @@ export class AnimeService{
         return this.http.get(this.TopAnimeUrl);
     }
 
-    getAnime(): Observable<any>{
-        return this.http.get(this.AnimeUrl);
+    searchAnime(term:string): Observable<any>{
+        const searchUrl = `https://api.jikan.moe/v4/anime?q=${term}`;
+        return this.http.get(searchUrl);
     }
 
     getAnimeById(id: string): Observable<any>{
-        const url = `https://api.jikan.moe/v4/anime/${id}/full`;
+        const url = `https://api.jikan.moe/v4/anime/${id}`;
         return this.http.get(url);
     }
 
