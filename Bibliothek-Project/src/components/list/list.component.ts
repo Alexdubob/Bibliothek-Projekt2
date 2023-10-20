@@ -14,12 +14,15 @@ export class ListComponent implements OnInit{
   upcomingAnimeSeasonList: any[]= [];
   topAnimeList: any[]= [];
 
-  constructor(private animeService: AnimeService, private animeDataServie: AnimeDataService){}
+  constructor(
+    private animeService: AnimeService, 
+    ){}
 
 
   ngOnInit(): void {
       this.animeService.getSeasonNow().subscribe(
         (currentAnimeSeasonList:any) => {
+          console.log(currentAnimeSeasonList)
           this.currentAnimeSeasonList = currentAnimeSeasonList.data;
           console.log(this.currentAnimeSeasonList)
         },
