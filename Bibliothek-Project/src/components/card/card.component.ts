@@ -25,6 +25,7 @@ export class CardComponent {
   @Input() img?: any;
   @Input() anime?: Anime;
 
+
   userData = this.userDataService.getUserData();
 
   notLogedIn() {
