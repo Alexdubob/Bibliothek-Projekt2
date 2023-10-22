@@ -49,9 +49,10 @@ export class CardComponent {
       const index = list.findIndex((listItem: string) => listItem === animeId);
 
       if (index !== -1) {
+        console.log(list)
         list.splice(index, 1);
         this.openSnackBar('Anime wurde erfolgreich entfernt', 'Schließen');
-        window.location.reload()
+        //window.location.reload()
       } else {
         list.push(animeId);
         this.openSnackBar(

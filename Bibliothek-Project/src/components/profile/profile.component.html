@@ -35,8 +35,8 @@
     <div *ngIf="isFavouritesAnimesVisible" id="favourites">
         <h1>Favourites</h1>
         <div class="card-container">
-            <app-card *ngFor="let Anime of detailedFavouriteList" [img]="Anime.data.images.jpg.image_url"
-                [title]="Anime.data.title" [anime]="Anime"></app-card>
+            <app-card *ngFor="let Anime of detailedFavouriteList" [img]="Anime.img"
+                [title]="Anime.title" [anime]="Anime"></app-card>
         </div>
     </div>
 
@@ -44,20 +44,20 @@
     <div *ngIf="isAnimeListVisible" id="anime-list">
         <h1>Finished Animes</h1>
         <div class="card-container">
-            <app-card *ngFor="let Anime of detailedFinishedList" [img]="Anime.data.images.jpg.image_url"
-                [title]="Anime.data.title" [anime]="Anime"></app-card>
+            <app-card *ngFor="let Anime of detailedFinishedList" [img]="Anime.img"
+                [title]="Anime.title" [anime]="Anime"></app-card>
         </div>
 
         <h1>Plan to Watch</h1>
         <div class="card-container">
-            <app-card *ngFor="let Anime of detailedPlanToWatchList" [img]="Anime.data.images.jpg.image_url"
-                [title]="Anime.data.title" [anime]="Anime"></app-card>
+            <app-card *ngFor="let Anime of detailedPlanToWatchList" [img]="Anime.img"
+                [title]="Anime.title" [anime]="Anime"></app-card>
         </div>
 
         <h1>Animes Watching</h1>
         <div class="card-container">
-            <app-card *ngFor="let Anime of detailedPlanToWatchList" [img]="Anime.data.images.jpg.image_url"
-                [title]="Anime.data.title" [anime]="Anime"></app-card>
+            <app-card *ngFor="let Anime of detailedPlanToWatchList" [img]="Anime.img"
+                [title]="Anime.title" [anime]="Anime"></app-card>
         </div>
     </div>
 </section>

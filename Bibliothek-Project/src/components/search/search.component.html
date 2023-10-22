@@ -7,7 +7,7 @@
     <section class="searchResults">
         <div *ngIf="searchResults">
             <div class="card-container">
-                <app-card *ngFor="let Anime of searchResults" [img]="Anime.images.jpg.image_url" [title]="Anime.title"
+                <app-card *ngFor="let Anime of searchResults" [img]="Anime.img" [title]="Anime.title"
                     [anime]="Anime"></app-card>
             </div>
         </div>
